@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@700&family=Inter:wght@500&display=swap');/* 로고 폰트 (Gaegu) >> font-family: 'Gaegu', cursive;
+메인 폰트 (inter) >> font-family: 'Inter', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-color : #516459;
+    --sub-color : #89A286;
+}
+
+header {
+    width: 100%;
+    height: 56px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    /* 구분용 배경색, 지워도 무관 ^^ */
+    background-color: #f2f2f2;
+}
+
+li {
+    list-style-type: none;
+}
+
+header a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.title {
+    display: block;
+}
+
+.title li {
+    font-family: 'Gaegu', cursive;
+    font-size: 45px;
+}
+
+.nav-list {
+    display: flex;
+    margin-left: 15%;
+    width: 25%;
+    justify-content: space-evenly;
+}
+
+.nav-list li {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.nav-li a:hover{
+    color: var(--sub-color);
+}
+
+@media screen and (max-width:1029px) {
+    .nav-list {
+        width: 40%;
+    }    
+}
