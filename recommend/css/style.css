@@ -42,9 +42,9 @@
 }
 
 .recommend-app {
-    margin-top: 230px;
+    margin-top: 330px;
     padding: 15px;
-    height: 800px;
+    height: 800px
     /* outline: 1px solid black;
     border-radius: 10px; */
 }
@@ -60,6 +60,7 @@
     font-family: 'Do Hyeon', sans-serif;
     font-size: 40px;
     white-space: 2;
+    text-decoration: underline 2px;
 }
 
 .recommend-app-top p:nth-child(2) {
@@ -68,11 +69,11 @@
 }
 
 .card-view-container {
-    padding: 50px;
+    padding: 70px;
     margin : 0 auto;
     display: grid;
     height: 100%;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
     outline: 1px solid green;
     border-radius: 20px;
@@ -83,6 +84,18 @@
     justify-content: center;
     align-items: center;
     background-color: var(--point-color);
+}
+
+.beta-card-view-container {
+    padding: 50px;
+    margin : 0 auto;
+    display: grid;
+    height: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 300px);
+    grid-gap: 30px;
+    outline: 1px solid green;
+    border-radius: 20px;
 }
 
 @media screen and (max-width:1029px){
