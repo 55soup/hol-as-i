@@ -7,7 +7,9 @@
     <title>프로그램</title>
     <style>
         *{
-            box-sizing: border-box;
+            item
+-sizing: border-item
+;
             margin: 0 auto;
             padding: 0;
         }
@@ -17,11 +19,28 @@
         h1{
             margin-top: 10rem;
         }
-        .flex-content{
-            display: flex;
-        }
         img{
             max-width: 100%;
+        }
+        .flex-content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 1.25rem; /* flex-box간의 간격 */
+            row-gap: 5rem;
+            flex-wrap: wrap;
+        }
+        .program-img{
+            width: 20rem;
+            height: 20rem;
+            border-radius: 1rem;
+            background-image: url('https://mblogthumb-phinf.pstatic.net/MjAxODEwMjJfNzQg/MDAxNTQwMTY5Mzg4Njgy.xV3zF6ZDvycNV1cz2V0s_9blMR_lrHXlv0_Rg_ElBvYg.2sDSMszhOGi5Bg0DZK5Pt-Z1HYDLLF7yNDZtCMdEVJMg.PNG.smartnari/image.png?type=w800');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .program-name{
+            font-size: 1.25rem;
+            font-weight: bold;
         }
     </style>
     <link rel="stylesheet" href="../css/nav.css">
@@ -39,12 +58,45 @@
             <li class="nav-li"><a href="#">추천 앱</a></li>
         </div>
     </header>
-
     <h1>현재 진행되고 있는 1인가구 프로그램</h1>
     <p>(*현재 서울에 있는 프로그램들만 제공됩니다)</p>
-    <img src = "https://cdn.crowdpic.net/detail-thumb/thumb_d_72C73AF5F65B7B988173E175BFB1E070.png" />
+    <img src = "https://cdn.crowdpic.net/detail-thumb/thumb_d_72C73AF5F65B7B988173E175BFB1E070.png" 
+    style="margin-bottom: 8rem;"/>
     <div class="flex-content">
-        <div class="flex-box">
+        <div class="flex-item">
+            <div class="program-img"></div>
+            <p class="program-name">여성 1인가구 안심지원사업...</p>
+            <p class="program-address">금천구</p>
+            <span class="program-tag">안전</span>
+            <p class="program-date">접수: 2021.10.08~2021.12.31</p>
+        </div>
+        <div class="flex-item">
+            <div class="program-img"></div>
+            <p class="program-name">여성 1인가구 안심지원사업...</p>
+            <p class="program-address">금천구</p>
+            <span class="program-tag">안전</span>
+            <p class="program-date">접수: 2021.10.08~2021.12.31</p>
+        </div>
+        <div class="flex-item">
+            <div class="program-img"></div>
+            <p class="program-name">여성 1인가구 안심지원사업...</p>
+            <p class="program-address">금천구</p>
+            <span class="program-tag">안전</span>
+            <p class="program-date">접수: 2021.10.08~2021.12.31</p>
+        </div>
+        <div class="flex-item">
+            <div class="program-img"></div>
+            <p class="program-name">여성 1인가구 안심지원사업...</p>
+            <p class="program-address">금천구</p>
+            <span class="program-tag">안전</span>
+            <p class="program-date">접수: 2021.10.08~2021.12.31</p>
+        </div>
+        <div class="flex-item">
+            <div class="program-img"></div>
+            <p class="program-name">여성 1인가구 안심지원사업...</p>
+            <p class="program-address">금천구</p>
+            <span class="program-tag">안전</span>
+            <p class="program-date">접수: 2021.10.08~2021.12.31</p>
         </div>
     </div>
 </body>
