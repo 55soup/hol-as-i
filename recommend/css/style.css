@@ -59,7 +59,7 @@
 .recommend-app-top p:nth-child(1) {
     margin-bottom: 10px;
     font-family: 'Do Hyeon', sans-serif;
-    font-size: 40px;
+    font-size: 30px;
     white-space: 2;
     text-decoration: underline 2px;
 }
@@ -70,14 +70,14 @@
 }
 
 .card-view-container {
-    padding: 80px;
+    padding: 60px;
     margin : 0 auto;
     display: grid;
     height: 100%;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 60px;
-    outline: 1px solid green;
-    border-radius: 20px;
+    outline: 3px solid rgb(0, 0, 0);
+    /* border-radius: 20px; */
 }
 
 .card-app {
