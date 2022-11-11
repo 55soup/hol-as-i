@@ -21,9 +21,10 @@
 }
 .paper {
     display: flex;
-    width: 900px;
-    height: 700px;
+    width: 800px;
+    height: 600px;
     margin: 0 auto;
+    padding-left: 30px;
 }
 .paper-text { 
     position: absolute;
@@ -44,12 +45,20 @@ h2 {
 }
 
 @media screen and(max-width: 1024px) {
+    .main-img {
+        width: 300px;
+        height: 500px;
+    }
     .paper {
         width: 700px;
         height: 500px;
     }
 }
 @media screen and (max-width: 768px) {
+    .main-img {
+        width: 300px;
+        height: 400px;
+    }
     .paper {
         width: 500px;
         height: 400px;
