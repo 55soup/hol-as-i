@@ -121,7 +121,7 @@ body > div > div:nth-child(2) > div.card-view-container > div:nth-child(3) > div
     width: 100%;
     height: 86%;
     background-color: rgb(154, 154, 154);
-    background-image: linear-gradient(rgba(67, 67, 67, 0.627), rgba(42, 42, 42, 0.7)), url(https://play-lh.googleusercontent.com/pOQaf_wSRuToTI0a_oCHnCV26E7UJVjJwLDSRVLIc-a5HBL5sBp0xOm9JT9G0sFvnReA=w240-h480-rw);  
+    background-image: linear-gradient(rgba(67, 67, 67, 0.627), rgba(42, 42, 42, 0.7))   , url(https://play-lh.googleusercontent.com/pOQaf_wSRuToTI0a_oCHnCV26E7UJVjJwLDSRVLIc-a5HBL5sBp0xOm9JT9G0sFvnReA=w240-h480-rw);  
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -220,15 +220,75 @@ body > div > div:nth-child(2) > div.card-view-container > div:nth-child(6) > div
 }
 
 .beta-card-view-container {
-    padding: 50px;
+    padding: 80px;
     margin : 0 auto;
     display: grid;
     height: auto;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 300px);
-    grid-gap: 30px;
+    grid-gap: 60px;
     outline: 1px solid green;
     border-radius: 20px;
+}
+
+.beta-card-view-container .card-app {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: rgb(180, 180, 180);
+    border-radius: 20px 20px 0 0;
+}
+
+.beta-card-view-container .card-main {
+    align-content: flex-end;
+    display: inline-grid;
+    padding: 10px;
+    width: 100%;
+    height: 86%;
+    background-color: rgb(154, 154, 154);
+    background-image: linear-gradient(rgba(67, 67, 67, 0.627), rgba(42, 42, 42, 0.7)); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.beta-card-view-container .card-main {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    color: white;
+}
+
+.beta-card-view-container .card-text .card-name {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.beta-card-view-container .card-cotnent {
+    width: 250px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: rgb(194, 194, 194);
+}
+
+.beta-card-view-container .card-icon {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 50px;
+}
+
+.beta-card-view-container .card-icon p {
+    font-size: 15px;
+    font-weight: 500;
+    margin-right: 20px;
+}
+
+.beta-card-view-container img {
+    width: 100%;
+    height: 250px;
 }
 
 @media screen and (max-width:1029px){
