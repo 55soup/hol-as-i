@@ -33,5 +33,10 @@ getMenuByAPI(link)
 
 const show = (jsonString) => {
     let json = JSON.parse(jsonString);
-    console.log(json)
+    let getJsonData = json["tbPartcptn"]["row"]
+    let seoulArea = getJsonData[0]["ATDRC_NM"]
+    let programName = getJsonData[0]["INSTT_NM"]
+    console.log(getJsonData)
+    console.log(seoulArea)
+    console.log(programName)
 }
