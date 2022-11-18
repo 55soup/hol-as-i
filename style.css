@@ -29,7 +29,7 @@ body {
     margin: 0 auto;
 }
 .paper-text {
-    font-size: 2fr;
+    font-size: 1.2rem;
     font-family: 'Gaegu', cursive;
     position: absolute;
     top: 50%;
