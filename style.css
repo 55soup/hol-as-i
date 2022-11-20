@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gaegu:wght@700&family=Inter:wght@500&display=swap');
+
+body {
+    overflow-x: hidden;
+}
 .container {
     width: 100%;
     height: auto;
     margin: 0;
 }
-
 .main-img {
     display: flex;
     margin: 120px auto;
@@ -13,4 +17,54 @@
     align-items: center;
     margin: 0 auto;
     padding: 200px; */
+}
+.paper-wrap {
+    position: relative;
+    margin-top: 160px;
+}
+.paper {
+    display: flex;
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+}
+.paper-text {
+    font-size: 1.2rem;
+    font-family: 'Gaegu', cursive;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50% );
+    text-align: center;
+}
+h2 {
+    margin: 100px 0 100px 0;
+    text-align: center;
+}
+.main-comment {
+    text-align: center;
+}
+.title {
+    text-align: center;
+}
+
+@media screen and(max-width: 1024px) {
+    .main-img {
+        width: 300px;
+        height: 500px;
+    }
+    .paper {
+        width: 700px;
+        height: 500px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .main-img {
+        width: 300px;
+        height: 430px;
+    }
+    .paper {
+        width: 500px;
+        height: 400px;
+    }
 }
