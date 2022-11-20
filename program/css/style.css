@@ -41,6 +41,7 @@ img{
     text-align: left;
 }
 .program-name{
+    width: 16rem;
     font-size: 1.25rem;
     font-weight: bold;
 }
