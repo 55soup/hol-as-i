@@ -41,7 +41,7 @@
     color: #000000;
     font-weight: 800;
     z-index: 99;
-    background-color: rgb(172, 172, 172);
+    background-color: rgb(255, 255, 255);
     border-radius: 100px;
     border: 1p solid black;
     width: 200px;
@@ -70,7 +70,7 @@
     -webkit-animation-name: fade;
     -webkit-animation-duration: 2.5s;
     animation-name: fade;
-    animation-duration: 1.5s;
+    animation-duration: 2.5s;
 }
 
 .recommend-app {
@@ -108,8 +108,8 @@
     height: 100%;
     /* auto-fill : 행, 열 크기에 맞게 자동 조정, repeat() 함수랑 사용 */
     /* minmax : 첫 인수 - 최솟값 / 두 번째 인수 - 최댓값 */
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-gap: 50px;
     outline: 3px solid rgb(0, 0, 0);
     flex-wrap: wrap;
     /* border-radius: 20px; */
@@ -123,7 +123,8 @@
     border-radius: 20px 20px 0 0;
 }
 
-body > div > div:nth-child(2) > div.card-view-container > div:nth-child(1) > div {
+
+body > div > div:nth-child(3) > div.card-view-container > div:nth-child(1) {
     align-content: flex-end;
     display: inline-grid;
     padding: 10px;
@@ -136,7 +137,7 @@ body > div > div:nth-child(2) > div.card-view-container > div:nth-child(1) > div
     background-position: center;
 }
 
-body > div > div:nth-child(2) > div.card-view-container > div:nth-child(2) > div {
+body > div > div:nth-child(3) > div.card-view-container > div:nth-child(2) {
     align-content: flex-end;
     display: inline-grid;
     padding: 10px;
@@ -149,7 +150,7 @@ body > div > div:nth-child(2) > div.card-view-container > div:nth-child(2) > div
     background-position: center;
 }
 
-body > div > div:nth-child(2) > div.card-view-container > div:nth-child(3) > div {
+body > div > div:nth-child(3) > div.card-view-container > div:nth-child(3) {
     align-content: flex-end;
     display: inline-grid;
     padding: 10px;
@@ -162,7 +163,7 @@ body > div > div:nth-child(2) > div.card-view-container > div:nth-child(3) > div
     background-position: center;
 }
 
-body > div > div:nth-child(2) > div.card-view-container > div:nth-child(4) > div {
+body > div > div:nth-child(3) > div.card-view-container > div:nth-child(4) {
     align-content: flex-end;
     display: inline-grid;
     padding: 10px;
@@ -175,7 +176,7 @@ body > div > div:nth-child(2) > div.card-view-container > div:nth-child(4) > div
     background-position: center;
 }
 
-body > div > div:nth-child(2) > div.card-view-container > div:nth-child(5) > div {
+body > div > div:nth-child(3) > div.card-view-container > div:nth-child(5) {
     align-content: flex-end;
     display: inline-grid;
     padding: 10px;
@@ -188,7 +189,7 @@ body > div > div:nth-child(2) > div.card-view-container > div:nth-child(5) > div
     background-position: center;
 }
 
-body > div > div:nth-child(2) > div.card-view-container > div:nth-child(6) > div {
+body > div > div:nth-child(3) > div.card-view-container > div:nth-child(6) {
     align-content: flex-end;
     display: inline-grid;
     padding: 10px;
@@ -256,10 +257,10 @@ body > div > div:nth-child(2) > div.card-view-container > div:nth-child(6) > div
 
 .beta-card-view-container {
     padding: 60px;
-    margin : 0 auto;
+    margin: 0 auto;
     display: grid;
     height: auto;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     grid-template-rows: repeat(2, 300px);
     grid-gap: 60px;
     outline: 1px solid green;
@@ -326,29 +327,76 @@ body > div > div:nth-child(2) > div.card-view-container > div:nth-child(6) > div
     height: 250px;
 }
 
-@media screen and (max-width:1029px){
+@media screen and (max-width:1260px) {
     .container {
-        width: 95%;
+        height: 3200px;
     }
+}
+
+@media  screen and (max-width:1250px) {
+    .beta-card-view-container {
+        padding: 60px;
+        margin: 0 auto;
+        display: grid;
+        height: auto;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-rows: repeat(2, 300px);
+        grid-gap: 60px;
+        outline: 1px solid green;
+        border-radius: 20px;
+    }
+}
+
+@media screen and (max-width:1096px) {
+    .beta-card-view-container {
+        padding: 60px;
+        margin: 0 auto;
+        display: grid;
+        height: auto;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        grid-template-rows: repeat(2, 300px);
+        grid-gap: 60px;
+        outline: 1px solid green;
+        border-radius: 20px;
+    }
+}
+
+@media screen and (max-width:1044px) {
+    .beta-card-view-container .card-app:nth-child(n+3) {
+        display: none;
+    }
+}
+
+@media screen and (max-width:1029px){
 
     .banner-recommend {
         display: flex;
         position: absolute;
-        top: 280px;
-        left: 60px;
-        font-size: 30px;
-        color: #ffffff;
+        top: 200px;
+        left: 50px;
+        font-size: 15px;
+        font-family: 'Gaegu', 'cursive';
+        color: #000000;
+        font-weight: 800;
+        z-index: 99;
+        background-color: rgb(172, 172, 172);
+        border-radius: 100px;
+        border: 1p solid black;
+        width: 100px;
+        height: 100px;
+        align-items: center;
+        text-align: center;
     }
 }
 
-@media screen and (max-width:1365px) {
-    footer {
-        margin-top: 720px;
+@media screen and (max-width:818px) {
+    body > div > div:nth-child(3) > div.card-view-container > div:nth-child(n+5) {
+        display: none;
     }
 }
 
 /* MOBILE */
-@media screen and (max-width:400px) {
+@media screen and (max-width:480px) {
     .card-view-container {
         padding: 20px;
         margin: 0 auto;
@@ -361,8 +409,12 @@ body > div > div:nth-child(2) > div.card-view-container > div:nth-child(6) > div
         /* border-radius: 20px; */
     }
 
-    .card-app:nth-child(n+4) {
+    body > div > div:nth-child(3) > div.card-view-container > div:nth-child(n + 6) {
         display: none;
+    }
+
+    .recommend-app {
+        margin-top: 200px;
     }
 
     .card-view-container img {
@@ -388,7 +440,7 @@ body > div > div:nth-child(2) > div.card-view-container > div:nth-child(6) > div
         display: grid;
         height: auto;
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        grid-template-rows: repeat(2, 360px);
+        grid-template-rows: repeat(2, 250px);
         grid-gap: 60px;
         outline: 1px solid green;
         border-radius: 20px;
@@ -403,7 +455,30 @@ body > div > div:nth-child(2) > div.card-view-container > div:nth-child(6) > div
         width: 260px;
     }
 
-    .footer {
-        margin-top: 200px;
+    .beta-card-view-container .card-icon {
+        display: none;
+    }
+
+
+    .beta-card-view-container .card-text .card-name {
+        font-size: 30px;
+    }
+
+    .beta-card-view-container img {
+        width: 100%;
+        height: 212px;
+    }
+
+    footer {
+        margin-top: 120px;
+    }
+
+    footer .title {
+        font-size: 30px;
+        font-family: 'Gaegu', cursive;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
     }
 }
