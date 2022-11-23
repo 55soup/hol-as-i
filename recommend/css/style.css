@@ -102,13 +102,16 @@
 }
 
 .card-view-container {
-    padding: 60px;
+    padding: 40px;
     margin : 0 auto;
     display: grid;
     height: 100%;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 60px;
+    /* auto-fill : 행, 열 크기에 맞게 자동 조정, repeat() 함수랑 사용 */
+    /* minmax : 첫 인수 - 최솟값 / 두 번째 인수 - 최댓값 */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 30px;
     outline: 3px solid rgb(0, 0, 0);
+    flex-wrap: wrap;
     /* border-radius: 20px; */
 }
 
@@ -252,11 +255,11 @@ body > div > div:nth-child(2) > div.card-view-container > div:nth-child(6) > div
 }
 
 .beta-card-view-container {
-    padding: 80px;
+    padding: 60px;
     margin : 0 auto;
     display: grid;
     height: auto;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     grid-template-rows: repeat(2, 300px);
     grid-gap: 60px;
     outline: 1px solid green;
@@ -335,5 +338,72 @@ body > div > div:nth-child(2) > div.card-view-container > div:nth-child(6) > div
         left: 60px;
         font-size: 30px;
         color: #ffffff;
+    }
+}
+
+@media screen and (max-width:1365px) {
+    footer {
+        margin-top: 720px;
+    }
+}
+
+/* MOBILE */
+@media screen and (max-width:400px) {
+    .card-view-container {
+        padding: 20px;
+        margin: 0 auto;
+        display: grid;
+        height: 100%;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-gap: 30px;
+        outline: 3px solid rgb(0, 0, 0);
+        flex-wrap: wrap;
+        /* border-radius: 20px; */
+    }
+
+    .card-app:nth-child(n+4) {
+        display: none;
+    }
+
+    .card-view-container img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .card-view-container .card-text .intro {
+        font-size: 13px;
+    }
+
+    .card-view-container .card-text .card-name {
+        font-size: 25px;
+    }
+
+    .card-view-container .card-text .card-content {
+        width: 100%;
+    }
+
+    .beta-card-view-container {
+        padding: 20px;
+        margin: 0 auto;
+        display: grid;
+        height: auto;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-template-rows: repeat(2, 360px);
+        grid-gap: 60px;
+        outline: 1px solid green;
+        border-radius: 20px;
+    }
+
+    .beta-card-view-container .card-cotnent {
+        width: 70%;
+        font-size: 12px;
+    }
+    
+    .beta-card-view-container .card-text {
+        width: 260px;
+    }
+
+    .footer {
+        margin-top: 200px;
     }
 }
