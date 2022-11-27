@@ -49,6 +49,14 @@ const show = (jsonString) => {
         const programAddress = document.getElementsByClassName("program-address")[i];
         const programDate = document.getElementsByClassName("program-date")[i];
         const programTag = document.getElementsByClassName("program-tag")[i];
+
+        //아이템 생성
+        let flex_item = document.createElement("flex-item");
+        let program_img = document.createElement("program-item");
+        let flex_item_conetn = document.createElement("flex-item-content");
+        let program_name = document.createElement("program-name");
+
+        
         
         programName.innerHTML = getProgramName; // 14글자 이상일 경우 그 뒤 글자들은...으로 바꾸기
         programAddress.innerHTML = getSeoulArea;
