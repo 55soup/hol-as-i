@@ -35,14 +35,16 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate( -50%, -50% );
+    transform: translate(-50%, -50%);
     text-align: center;
 }
 .pencil {
-    float: right;
+    transform: translate(1100px, -80%);
+    overflow: hidden;
+    margin: 0;
 }
 h2 {
-    margin: 100px 0 200px 0;
+    margin: 100px 0 100px 0;
     text-align: center;
 }
 .main-comment {
@@ -60,6 +62,10 @@ h2 {
     .paper {
         width: 700px;
         height: 500px;
+    }
+    .pencil {
+        transform: translate();
+        overflow: hidden;
     }
 }
 @media screen and (max-width: 768px) {
