@@ -48,7 +48,6 @@
     height: 200px;
     align-items: center;
     text-align: center;
-    
 }
 
 .dot {
@@ -183,7 +182,7 @@ body > div > div:nth-child(3) > div.card-view-container > div:nth-child(5) {
     width: 100%;
     height: 86%;
     background-color: rgb(154, 154, 154);
-    background-image: linear-gradient(rgba(67, 67, 67, 0.627), rgba(42, 42, 42, 0.7)), url(https://play-lh.googleusercontent.com/apu_RFyx3iTNWZIbu6kIUfEKSFcguPgsN54XWAYcdKYDljnSacSdihPRxwZCYMu1N0U=w240-h480-rw);  
+    background-image: linear-gradient(rgba(67, 67, 67, 0.627), rgba(42, 42, 42, 0.7)), url(https://play-lh.googleusercontent.com/9Yxg-8ixwwKJJQ8EFRu7vfKiYqBZ6kUnpJC8S5a3TghZ2MYecc2mNHK0QLvmHDIjwQ=w240-h480-rw);  
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -325,6 +324,42 @@ body > div > div:nth-child(3) > div.card-view-container > div:nth-child(6) {
 .beta-card-view-container img {
     width: 100%;
     height: 250px;
+}
+
+/* 실습실 모니터 기준 */
+@media screen and (min-width:1536px) {
+    .card-view-container {
+        padding: 40px;
+        margin : 0 auto;
+        display: grid;
+        height: 100%;
+        /* auto-fill : 행, 열 크기에 맞게 자동 조정, repeat() 함수랑 사용 */
+        /* minmax : 첫 인수 - 최솟값 / 두 번째 인수 - 최댓값 */
+        grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+        grid-gap: 50px;
+        outline: 3px solid rgb(0, 0, 0);
+        flex-wrap: wrap;
+        /* border-radius: 20px; */
+    }
+
+    .banner-recommend {
+        display: flex;
+        position: absolute;
+        top: 230px;
+        left: 350px;
+        font-size: 35px;
+        font-family: 'Gaegu', 'cursive';
+        color: #000000;
+        font-weight: 800;
+        z-index: 99;
+        background-color: rgb(255, 255, 255);
+        border-radius: 100px;
+        border: 1p solid black;
+        width: 200px;
+        height: 200px;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 @media screen and (max-width:1260px) {
