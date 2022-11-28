@@ -1,0 +1,56 @@
+:root{
+    --danger-color: #FF9A9A;
+}
+::-webkit-scrollbar {
+/* 스크롤바 없애기*/
+display: none;
+}
+*{
+    box-sizing: border-item;
+    margin: 0 auto;
+    padding: 0;
+}
+body{
+    text-align: center;            
+}
+h1{
+    margin-top: 10rem;
+}
+img{
+    max-width: 100%;
+}
+.flex-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1.25rem; /* flex-box간의 간격 */
+    row-gap: 5rem;
+    flex-wrap: wrap;
+    margin: 0 20rem 0 20rem;
+}
+.program-img{
+    width: 20rem;
+    height: 20rem;
+    border-radius: 1rem;
+    background-image: url('https://mblogthumb-phinf.pstatic.net/MjAxODEwMjJfNzQg/MDAxNTQwMTY5Mzg4Njgy.xV3zF6ZDvycNV1cz2V0s_9blMR_lrHXlv0_Rg_ElBvYg.2sDSMszhOGi5Bg0DZK5Pt-Z1HYDLLF7yNDZtCMdEVJMg.PNG.smartnari/image.png?type=w800');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.flex-item-content{
+    /* 이미지를 제외한 프로그램 내용 요소 */
+    text-align: left;
+}
+.program-name{
+    width: 16rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.program-tag{
+    background-color: var(--danger-color);
+    padding: 0.2rem 1rem 0.2rem 1rem;
+    border-radius: 0.9rem;
+    margin-left: 1rem;
+}
+.program-date{
+    font-size: 20px;
+}

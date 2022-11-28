@@ -34,9 +34,33 @@ getMenuByAPI(link)
 const show = (jsonString) => {
     let json = JSON.parse(jsonString);
     let getJsonData = json["tbPartcptn"]["row"]
-    let seoulArea = getJsonData[0]["ATDRC_NM"]
-    let programName = getJsonData[0]["INSTT_NM"]
     console.log(getJsonData)
-    console.log(seoulArea)
-    console.log(programName)
+    // jsonData 순서대로 가져오기
+    for (let i = 0; i<getJsonData.length; i++){
+        let getSeoulArea = getJsonData[i]["ATDRC_NM"];
+        let getProgramName = getJsonData[i]["PARTCPTN_SJ"];
+        let startDate = getJsonData[i]["RCEPT_DE1"];
+        let endDate = getJsonData[i]["RCEPT_DE2"];
+        let applyLink = getJsonData[i]["RCEPT_MTH_LINK"];
+        let tag = getJsonData[i]["SE_NM"];
+
+        // const flexItemContent = document.getElementsByClassName("flex-item-content")[0];
+        const programName = document.getElementsByClassName("program-name")[i];
+        const programAddress = document.getElementsByClassName("program-address")[i];
+        const programDate = document.getElementsByClassName("program-date")[i];
+        const programTag = document.getElementsByClassName("program-tag")[i];
+
+        //아이템 생성
+        let flex_item = document.createElement("flex-item");
+        let program_img = document.createElement("program-item");
+        let flex_item_conetn = document.createElement("flex-item-content");
+        let program_name = document.createElement("program-name");
+
+        
+        
+        programName.innerHTML = getProgramName; // 14글자 이상일 경우 그 뒤 글자들은...으로 바꾸기
+        programAddress.innerHTML = getSeoulArea;
+        programDate.innerHTML = `${startDate}~${endDate}`.replaceAll("-", "."); //2021-10-08 => 2021.10.08
+        programTag.innerHTML = tag;
+    }
 }
