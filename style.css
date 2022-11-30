@@ -60,15 +60,15 @@ h2 {
         width: 300px;
         height: 500px;
     }
+    .paper {
+        width: 500px;
+        height: 400px;
+    }
     .pencil {
         /* float: right; */
         position: absolute;
         top: 1100px;
         left: 480px;
-    }
-    .pencil {
-        position: absolute;
-        left: 500px;
     }
 }
 @media screen and (max-width: 768px) {
@@ -79,5 +79,10 @@ h2 {
     .paper {
         width: 500px;
         height: 400px;
+    }
+    .pencil {
+        position: absolute;
+        top: 1000px;
+        left: 280px;
     }
 }
