@@ -35,14 +35,17 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate( -50%, -50% );
+    transform: translate(-50%, -50%);
     text-align: center;
 }
 .pencil {
-    float: right;
+    /* float: right; */
+    position: absolute;
+    top: 1380px;
+    left: 1100px;
 }
 h2 {
-    margin: 100px 0 200px 0;
+    margin: 100px 0 100px 0;
     text-align: center;
 }
 .main-comment {
@@ -58,8 +61,14 @@ h2 {
         height: 500px;
     }
     .paper {
-        width: 700px;
-        height: 500px;
+        width: 500px;
+        height: 400px;
+    }
+    .pencil {
+        /* float: right; */
+        position: absolute;
+        top: 1100px;
+        left: 480px;
     }
 }
 @media screen and (max-width: 768px) {
@@ -70,5 +79,10 @@ h2 {
     .paper {
         width: 500px;
         height: 400px;
+    }
+    .pencil {
+        position: absolute;
+        top: 1000px;
+        left: 280px;
     }
 }
