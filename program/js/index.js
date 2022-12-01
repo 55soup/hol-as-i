@@ -44,23 +44,23 @@ const show = (jsonString) => {
         let applyLink = getJsonData[i]["RCEPT_MTH_LINK"];
         let tag = getJsonData[i]["SE_NM"];
 
-        // const flexItemContent = document.getElementsByClassName("flex-item-content")[0];
-        const programName = document.getElementsByClassName("program-name")[i];
-        const programAddress = document.getElementsByClassName("program-address")[i];
-        const programDate = document.getElementsByClassName("program-date")[i];
-        const programTag = document.getElementsByClassName("program-tag")[i];
+        const date = `${startDate}~${endDate}`.replaceAll("-", ".");
 
         //아이템 생성
+        let flex_content = document.getElementsByClassName("flex-content")[0];
         let flex_item = document.createElement("flex-item");
-        let program_img = document.createElement("program-item");
-        let flex_item_conetn = document.createElement("flex-item-content");
-        let program_name = document.createElement("program-name");
-
-        
-        
-        programName.innerHTML = getProgramName; // 14글자 이상일 경우 그 뒤 글자들은...으로 바꾸기
-        programAddress.innerHTML = getSeoulArea;
-        programDate.innerHTML = `${startDate}~${endDate}`.replaceAll("-", "."); //2021-10-08 => 2021.10.08
-        programTag.innerHTML = tag;
+        flex_item.innerHTML =`<div class="program-img"></div>
+                                <div class="flex-item-content">
+                                    <p class="program-name">${getProgramName}</p>
+                                    <div style="display: flex; margin-bottom: 0.8rem;">
+                                        <div class="location" style="display: flex; justify-content: center; align-items: center;">
+                                            <img src="../img/map-pin.svg" style="width: 18px; height:18px; margin-right: 5px;" />
+                                            <p class="program-address">${getSeoulArea}</p>
+                                        </div>
+                                            <span class="program-tag">${tag}</span>
+                                        </div>
+                                    <p class="program-date">${date}</p>
+                                </div>`;
+        flex_content.appendChild(flex_item);
     }
 }
