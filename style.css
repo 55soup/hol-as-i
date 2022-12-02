@@ -25,7 +25,7 @@ body {
 }
 .paper {
     display: flex;
-    width: 800px;
+    width: 770px;
     height: 600px;
     margin: 0 auto;
 }
@@ -38,11 +38,13 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
 }
+.pencil-wrap {
+    position: fixed;
+}
 .pencil {
     /* float: right; */
     position: absolute;
-    top: 1380px;
-    left: 1100px;
+    
 }
 h2 {
     margin: 100px 0 100px 0;
@@ -81,8 +83,8 @@ h2 {
         height: 400px;
     }
     .pencil {
-        position: absolute;
+        position: fixed;
         top: 1000px;
-        left: 280px;
+        left: 250px;
     }
 }
