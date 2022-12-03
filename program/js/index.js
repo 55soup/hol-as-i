@@ -1,12 +1,12 @@
 const KEY = "6355456a56736f6a37317159797156";
 const TYPE = "json"
 const link = `http://openapi.seoul.go.kr:8088/${KEY}/${TYPE}/tbPartcptn/1/5/`;
-
+let addressArr=[];
  // 비동기로 호출하자
  fetch(link).then((response) => response.json()).then((json) => console.log(json));
 
  // AJAX로 link 호출하자(Asynchronous JavaScript And XML)
-let getMenuByAPI = (link)=>{
+let getProgrammAPI = (link)=>{
     // XMLHttpRequest 만들자
     let xhr = new XMLHttpRequest();
     
@@ -17,6 +17,7 @@ let getMenuByAPI = (link)=>{
             console.log("성공!");
             // console.log(xhr.response);
             show(xhr.response); // json 파싱함수 호출
+            addressArr = getAddress(xhr.response);
         }else{
             //실패
         }
@@ -29,9 +30,8 @@ let getMenuByAPI = (link)=>{
     xhr.send();
 }
 
-getMenuByAPI(link)
 
-const show = (jsonString) => {
+function show(jsonString) {
     let json = JSON.parse(jsonString);
     let getJsonData = json["tbPartcptn"]["row"]
     console.log(getJsonData)
@@ -64,3 +64,62 @@ const show = (jsonString) => {
         flex_content.appendChild(flex_item);
     }
 }
+
+function getAddress(jsonString){
+    let json = JSON.parse(jsonString);
+    let getJsonData = json["tbPartcptn"]["row"]
+    let address=[]
+    for (let i = 0; i<getJsonData.length; i++)
+        address.push(getJsonData[i]["PLACE_ADRES1"]);
+    return address;
+}
+
+function initialize() {
+    getProgrammAPI(link) // api 호출
+    setTimeout(function(){
+        var mapOptions = {
+            zoom: 11, // 지도를 띄웠을 때의 줌 크기
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        var map = new google.maps.Map(document.getElementById("map"), // div의 id과 값이 같아야 함. "map-canvas"
+                            mapOptions);
+
+        var size_x = 40; // 마커로 사용할 이미지의 가로 크기
+        var size_y = 40; // 마커로 사용할 이미지의 세로 크기
+
+        // 마커로 사용할 이미지 주소
+        var image = new google.maps.MarkerImage( '주소를 입력하세요',
+                                            new google.maps.Size(size_x, size_y),
+                                            '',
+                                            '',
+                                            new google.maps.Size(size_x, size_y));
+
+        // Geocoding *****************************************************
+        for (i of addressArr){
+            var address = i; // DB에서 주소 가져와서 검색하거나 왼쪽과 같이 주소를 바로 코딩.
+            var marker = null;
+            var geocoder = new google.maps.Geocoder();
+            geocoder.geocode( { 'address': address}, function(results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                map.setCenter(results[0].geometry.location);
+                marker = new google.maps.Marker({
+                    map: map,
+                    icon: image, // 마커로 사용할 이미지(변수)
+                    title: "kara", // 마커에 마우스 포인트를 갖다댔을 때 뜨는 타이틀
+                    position: results[0].geometry.location
+                });
+                // var content = "한밭도서관<br/><br/>Tel: 042-580-4114"; // 말풍선 안에 들어갈 내용
+                // 마커를 클릭했을 때의 이벤트. 말풍선 뿅~
+                // var infowindow = new google.maps.InfoWindow({ content: content});
+                google.maps.event.addListener(marker, "click", function() {infowindow.open(map,marker);});
+            } else {
+                alert("Geocode was not successful for the following reason: " + status);
+            }
+        });
+        }
+    },500);
+    // Geocoding // *****************************************************
+     
+}
+google.maps.event.addDomListener(window, 'load', initialize);
