@@ -38,13 +38,11 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
 }
-.pencil-wrap {
-    position: fixed;
-}
 .pencil {
-    /* float: right; */
     position: absolute;
-    
+    top: 1300px;
+    left: 800px;
+    width: 500px;
 }
 h2 {
     margin: 100px 0 100px 0;
@@ -57,7 +55,7 @@ h2 {
     text-align: center;
 }
 
-@media screen and(max-width: 1024px) {
+@media screen and (min-width: 768px) and(max-width: 1024px) {
     .main-img {
         width: 300px;
         height: 500px;
@@ -67,10 +65,10 @@ h2 {
         height: 400px;
     }
     .pencil {
-        /* float: right; */
         position: absolute;
-        top: 1100px;
-        left: 480px;
+        top: 1290px;
+        left: 800px;
+        width: 500px;
     }
 }
 @media screen and (max-width: 768px) {
@@ -83,8 +81,8 @@ h2 {
         height: 400px;
     }
     .pencil {
-        position: fixed;
+        position: absolute;
         top: 1000px;
-        left: 250px;
+        left: 300px;
     }
 }
