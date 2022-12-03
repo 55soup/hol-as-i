@@ -124,7 +124,13 @@ body {
     align-items: flex-end;
     background-color: rgb(180, 180, 180);
     border-radius: 20px 20px 20px 20px;
+    transition: all 0.2s linear;
 }
+
+.card-app:hover {
+    transform: scale(1.1);
+}
+
 
 
 body > div > div:nth-child(3) > div.card-view-container > div:nth-child(1) {
