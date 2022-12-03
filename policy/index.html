@@ -8,19 +8,7 @@
 
     <title>정책페이지</title>
     <link rel="stylesheet" href="../css/nav.css">
-    <style>
-        main{
-            margin: 0 auto;
-            max-width: 1180px;
-        }
-        .grid-container{
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-        }
-        h3{
-            margin-top: 12rem;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
      <!-- 내비게이션 바 -->
@@ -37,12 +25,37 @@
         <li class ="nav-li tgm" id="tgm"><i class='bx bx-menu bx-md'></i></li>
     </header>
     <main>
+       <div class="policy_container out_container">
         <h3>주거 지원</h3>
-        <div class="grid-container">
-            <div class="grid-item">행복주택</div>
-            <div class="grid-item">청년주택</div>
-            <div class="grid-item">사회적 주택</div>
+        <div class="flex-container">
+            <div class="flex-item">행복주택</div>
+            <div class="flex-item">청년주택</div>
+            <div class="flex-item">사회적 주택</div>
         </div>
+       </div>
+       <div class="security_container out_container">
+        <h3>안전 지원</h3>
+        <div class="flex-container">
+            <div class="flex-item">성범죄자 알림e</div>
+            <div class="flex-item">여성안심귀가스카우트</div>
+            <div class="flex-item">무인택배 보관함</div>
+        </div>
+       </div>
+       <div class="finance_container out_container">
+        <h3>재정 지원</h3>
+        <div class="flex-container">
+            <div class="flex-item">기초생활보장제도</div>
+            <div class="flex-item">장기요양급여</div>
+            <div class="flex-item">주택담보노후 연금제</div>
+        </div>
+       </div>
+       <div class="health_container out_container">
+        <h3>건강 지원</h3>
+        <div class="flex-container">
+            <div class="flex-item">건강검진 2년에 1회 무료</div>
+            <div class="flex-item">노인돌봄 기본 서비스</div>
+        </div>
+       </div>
     </main>
 
     <script src="../css/main.js"></script>
