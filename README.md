@@ -37,3 +37,9 @@
 |11 / 23|중간 점검(추가 요소, 누락 요소 점검)||✔|
 |11 / 25 ~ 12 / 2|추가 요소 작성||✔|
 |12 / 3|프로젝트 구현물 제출|||
+
+## 🫧 Contributors
+
+<a href="https://github.com/55soup/hol-as-i/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=55soup/hol-as-i" />
+</a>
