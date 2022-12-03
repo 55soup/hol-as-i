@@ -20,7 +20,7 @@ header {
     align-items: center;
 
     /* 구분용 배경색, 지워도 무관 ^^ */
-    background-color: #f2f2f2;
+    background-color: var(--sub-color);
 }
 
 li {
@@ -55,11 +55,74 @@ header a {
 }
 
 .nav-li a:hover{
-    color: var(--sub-color);
+    color: white;
+}
+
+.tgm {
+    display: none;
+}
+
+.tgm-close {
+    display: none;
 }
 
 @media screen and (max-width:1029px) {
     .nav-list {
         width: 40%;
     }    
+}
+
+/* TOGGLE MENU */
+@media screen and (max-width:768px) {
+
+    .nav-list {
+        background-color: #d6dbd5;
+        display: flex;
+        justify-content: start;
+        gap: 50px;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        right: 0px;
+        height: 100vh;
+        top: 56px;
+        width: 50%;
+        z-index: 99;
+
+        /* x축으로 100%만큼 이동 */
+        transform: translateX(100%);
+        
+        /* 0.5초간 ease in  */
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-li:nth-child(1) {
+        margin-top: 50px;
+    }
+
+    /* 클릭되면 메뉴가 왼쪽으로 나와야 하기 떄문에 */
+    .nav-list.active {
+        transform: translateX(0%);
+    }
+
+    .tgm {
+        display: block;
+        justify-content: right;
+    }
+
+    .tgm:hover {
+        cursor: pointer;
+    }
+
+    /* keyframe : 시간 변화, 나타내기, 사라지기 */
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(5px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
 }
