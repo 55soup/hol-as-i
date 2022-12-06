@@ -72,7 +72,7 @@ function show(jsonString) {
     return getJsonData;
 }
 
-function getAddress(jsonString){
+function getAddress(jsonString){ // 프로그램 하는 위치 getter
     let json = JSON.parse(jsonString);
     let getJsonData = json["tbPartcptn"]["row"]
     let address=[]
@@ -81,7 +81,7 @@ function getAddress(jsonString){
     return address;
 }
 
-function initialize() {
+function initialize() { // google 지도
     getProgrammAPI(link) // api 호출
     setTimeout(function(){ // 비동기호출
         let mapOptions = {
@@ -118,7 +118,7 @@ function initialize() {
                     position: results[0].geometry.location
                 });
                 let content = program_name; // 말풍선 안에 들어갈 내용
-                // 마커를 클릭했을 때의 이벤트. 말풍선 뿅~
+                // 마커를 클릭했을 때 이벤트
                 let infowindow = new google.maps.InfoWindow({ content: content});
                 google.maps.event.addListener(marker, "click", function() {infowindow.open(map,marker);});
             } else {
