@@ -1,4 +1,4 @@
-# ✨ 홀앗이
+# ✨ [홀앗이](https://55soup.github.io/hol-as-i/)
 >  혼자였던 나의 삶을 빛나게 해줄 **"홀앗이"** >>>>
 > [기획서 보러가기](https://docs.google.com/document/d/1cu-0nnNIiQf5SULQqqxKZfgSF8_V1_Pm0nKpfsVovOc/edit?usp=sharing) / [디자인 보러가기](https://www.figma.com/file/alGAorJ6ZfsdjvBhwVnZ8Z/%F0%9F%8C%9C%E2%9A%A1%F0%9F%8C%9B?node-id=0%3A1&t=pMiCEwWxRktCb00v-1)
 
@@ -12,7 +12,15 @@
 ## 🌍 홀앗이 실행 방법
 1. 깃 페이지 접속한다.
 2. 메인 페이지를 구경한다. 완전 잘 만듦!
-3. 프로그램 페이지에 가서 **1인 가구 프로그램**을 본다.
+3. 프로그램 페이지에 가서 **1인 가구 프로그램**을 본다.  
+__3-1. 지도api가 실행이 안될때!!__
+
+|**상단 좌물쇠 클릭 - 사이트 설정 - 안전하지 않은 콘텐츠 - `허용`으로 변경 - 적용**|
+|:--:|
+|![image](https://user-images.githubusercontent.com/86298664/206324659-d302252f-6d73-4ddb-ae74-35938c2dc8a1.png)|
+|![image](https://user-images.githubusercontent.com/86298664/206324666-60b6410a-a24d-4094-a522-0cb48b2cd180.png)|
+
+
 4. 본인에게 필요한 프로그램이 있다면 **클릭**
 5. 정책 페이지로 가서 **1인 가구에 관한 정책**을 본다.
 6. 마지막으로 추천 앱 페이지로 가서 **1인 가구를 위한 앱**을 본다.
