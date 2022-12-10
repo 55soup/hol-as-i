@@ -82,8 +82,12 @@ function getAddress(jsonString){ // 프로그램 하는 위치 getter
 }
 
 function initialize() { // google 지도
-    getProgrammAPI(link) // api 호출
-    setTimeout(function(){ // 비동기호출
+    let promise = new Promise((resolve, reject)=>{
+        getProgrammAPI(link) // apis 호출
+        resolve();
+    })
+
+    promise.then(setTimeout(function(){ // 비동기호출
         let mapOptions = {
             zoom: 11, // 지도를 띄웠을 때의 줌 크기
             mapTypeId: google.maps.MapTypeId.ROADMAP
@@ -126,7 +130,8 @@ function initialize() { // google 지도
             }
         });
         }
-    },500);
+    },300))
+    
     // Geocoding // *****************************************************
      
 }
