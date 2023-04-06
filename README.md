@@ -31,7 +31,7 @@ __3-1. 지도api가 실행이 안될때!!(시크릿모드x)__
 |이름|링크|라이브러리 / 데이터|
 |:--:|:--|:--:|
 |서울시 1인가구 참여프로그램 현황|https://data.seoul.go.kr/dataList/OA-21309/S/1/datasetView.do|데이터|
-|google maps api|https://developers.google.com/maps|라이브러리
+|~google maps api~ kakao maps api|https://apis.map.kakao.com/|라이브러리
 
 ## ✈ 일정
 
