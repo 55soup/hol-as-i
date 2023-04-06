@@ -1,55 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" /> -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <title>프로그램</title>
-    <style>
-    </style>
-    <link rel="stylesheet" href="css/style.css">
-     <!--아이콘 가져오기-->
-     <link
-     href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet"/>
-     <script src="https://unpkg.com/feather-icons"></script>
-    <link rel="stylesheet" href="../css/nav.css">
-    <!-- google 지도 -->
+    <style></style>
+    <link rel="stylesheet" href="css/style.css" />
+    <!--아이콘 가져오기-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="../css/nav.css" />
     <head>
-        <!-- <script defer src="./index.js"></script> -->
-        <script
-          defer
-          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAk-OMoqFKqdyQ32yh3aUzjEGMjCi3f2Mk&callback=initMap"
-        ></script> 
-      </head>
-</head>
-<body>
+      <!-- kakao maps -->
+      <script
+        type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7e6276eb9bc0a5c9263907f071931162&libraries=services"
+      ></script>
+    </head>
+  </head>
+  <body>
     <!-- 내비게이션 바 -->
     <header>
-        <div class="title">
-            <li><a href="../index.html">홀앗이</a></li>
-        </div>
-        <div class="nav-list">
-            <li class="nav-li"><a href="../index.html">홈</a></li>
-            <li class="nav-li"><a href="#">프로그램</a></li>
-            <li class="nav-li"><a href="../policy/index.html">정책</a></li>
-            <li class="nav-li"><a href="../recommend/index.html">추천 앱</a></li>
-        </div>
-        <li class ="nav-li tgm" id="tgm"><i class='bx bx-menu bx-md'></i></li>
+      <div class="title">
+        <li><a href="../index.html">홀앗이</a></li>
+      </div>
+      <div class="nav-list">
+        <li class="nav-li"><a href="../index.html">홈</a></li>
+        <li class="nav-li"><a href="#">프로그램</a></li>
+        <li class="nav-li"><a href="../policy/index.html">정책</a></li>
+        <li class="nav-li"><a href="../recommend/index.html">추천 앱</a></li>
+      </div>
+      <li class="nav-li tgm" id="tgm"><i class="bx bx-menu bx-md"></i></li>
     </header>
     <main>
-        <h1>현재 진행되고 있는 1인가구 프로그램</h1>
-        <p>(*현재 서울에 있는 프로그램들만 제공됩니다)</p>
-        <div id="map" style="height: 600px; margin: 4rem;"></div>
-        <!-- <img src = "https://cdn.crowdpic.net/detail-thumb/thumb_d_72C73AF5F65B7B988173E175BFB1E070.png" 
+      <h1>현재 진행되고 있는 1인가구 프로그램</h1>
+      <p>(*현재 서울에 있는 프로그램들만 제공됩니다)</p>
+      <div id="map" style="height: 600px; margin: 4rem"></div>
+      <!-- <img src = "https://cdn.crowdpic.net/detail-thumb/thumb_d_72C73AF5F65B7B988173E175BFB1E070.png" 
         style="margin-bottom: 8rem;"/> -->
-        <div class="flex-content"></div>
+      <div class="flex-content"></div>
     </main>
-</body>
-<script>
-    feather.replace()
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=initialize"></script>
-<script src="js/index.js" type="text/javascript"></script>
-<script src="../css/main.js"></script>
+  </body>
+  <script>
+    feather.replace();
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=initialize"></script>
+  <script src="js/index.js" type="text/javascript"></script>
+  <script src="../css/main.js"></script>
 </html>
