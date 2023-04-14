@@ -1,8 +1,8 @@
 const KEY = "6355456a56736f6a37317159797156";
 const TYPE = "json";
 const link = `http://openapi.seoul.go.kr:8088/${KEY}/${TYPE}/tbPartcptn/1/5/`;
-let addressArr = [];
 let apis;
+let addressArr = [];
 let imageArr = [
   "https://familynet.or.kr/upload/editor/04738a3b-791f-490e-b891-5c90c25fe22a.png",
   "https://lh4.googleusercontent.com/F0vtI090bgGFMipDpTZV8h_pRi0CDrqHoMD9PJwdW_48VujI7HzBICkO5eqmneA0izTpHMDP1lSu7j--1I9fj6WzEGUAGKa2KT1KnCZzzyVoNzC3FF6hjnHRMpJREoYgGw=w891",
@@ -25,9 +25,11 @@ let getProgrammAPI = (link) => {
     if (xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
       //리퀘스트가 다 끝나서 응답이 왔다면
       console.log("성공!");
-      // console.log(xhr.response);
-      apis = show(xhr.response); // json 파싱함수 호출
-      addressArr = getAddress(xhr.response);
+      let json = JSON.parse(xhr.response);
+      let getData = json["tbPartcptn"]["row"];
+      apis = show(getData); // json 파싱함수 호출
+      // addressArr = getAddress(getData);
+      console.log(addressArr);
     } else {
       //실패
     }
@@ -41,17 +43,16 @@ let getProgrammAPI = (link) => {
 };
 
 function show(jsonString) {
-  let json = JSON.parse(jsonString);
-  let getJsonData = json["tbPartcptn"]["row"];
-  // console.log(getJsonData)
+  // let json = JSON.parse(jsonString);
+  // let jsonString = json["tbPartcptn"]["row"];
   // jsonData 순서대로 가져오기
-  for (let i = 0; i < getJsonData.length; i++) {
-    let getSeoulArea = getJsonData[i]["ATDRC_NM"];
-    let getProgramName = getJsonData[i]["PARTCPTN_SJ"];
-    let startDate = getJsonData[i]["RCEPT_DE1"];
-    let endDate = getJsonData[i]["RCEPT_DE2"];
-    let applyLink = getJsonData[i]["RCEPT_MTH_LINK"];
-    let tag = getJsonData[i]["SE_NM"];
+  for (let i = 0; i < jsonString.length; i++) {
+    let getSeoulArea = jsonString[i]["ATDRC_NM"];
+    let getProgramName = jsonString[i]["PARTCPTN_SJ"];
+    let startDate = jsonString[i]["RCEPT_DE1"];
+    let endDate = jsonString[i]["RCEPT_DE2"];
+    let applyLink = jsonString[i]["RCEPT_MTH_LINK"];
+    let tag = jsonString[i]["SE_NM"];
 
     const date = `${startDate}~${endDate}`.replaceAll("-", ".");
 
@@ -72,16 +73,16 @@ function show(jsonString) {
                                 </div>`;
     flex_content.appendChild(flex_item);
   }
-  return getJsonData;
+  return jsonString;
 }
 
 function getAddress(jsonString) {
   // 프로그램 하는 위치 getter
-  let json = JSON.parse(jsonString);
-  let getJsonData = json["tbPartcptn"]["row"];
+  // let json = JSON.parse(jsonString);
+  // let jsonString = json["tbPartcptn"]["row"];
   let address = [];
-  for (let i = 0; i < getJsonData.length; i++)
-    address.push(getJsonData[i]["PLACE_ADRES1"]);
+  for (let i = 0; i < jsonString.length; i++)
+    address.push(jsonString[i]["PLACE_ADRES1"]);
   return address;
 }
 
@@ -131,7 +132,7 @@ promise.then(
         }
       );
     }
-  }, 300)
+  }, 1500)
 );
 
 function getImageUrl() {}
